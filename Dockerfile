@@ -1,4 +1,4 @@
-FROM docker:dind
+FROM alpine:latest
 
 # Install requirements
 RUN apk add -U openssl curl tar gzip bash ca-certificates && \
@@ -12,5 +12,3 @@ RUN curl -L -o /usr/bin/kubectl https://storage.googleapis.com/kubernetes-releas
   chmod +x /usr/bin/kubectl && \
   kubectl version --client
 
-ENTRYPOINT []
-CMD []
