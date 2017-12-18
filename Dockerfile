@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM docker:latest
 
 # Install requirements
 RUN apk add -U openssl curl tar gzip bash ca-certificates && \
